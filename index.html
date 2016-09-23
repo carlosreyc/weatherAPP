@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script>
+      $(document).ready(function() {
+
+        $("#getQuote").on("click", function(){
+
+
+          $.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&&lang=en&callback=", function(json) {
+      $(".message").html(JSON.stringify(json));
+      });
+
+
+        });
+
+      });
+      </script>
+
+    </head>
+    <body>
+    <div class="container-fluid">
+    <header>
+      <h1>Random Quote Machine <small>by: Carlos Reyes</small></h1>
+    </header>
+      <div class="container">
+        <section id="quotes">
+        <div class="message"> The Quote goes here </div>
+        </section>
+        <section id="rqmbutton">
+        <button class="btn-default btn" id="getQuote">Give me a Quote</button>
+        </section>
+    </div>
+
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
