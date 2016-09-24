@@ -6,6 +6,7 @@ $(document).ready(function() {
     $.getJSON("https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en", function(json) {
 $("#message").html(json.quoteText + "<br> " + json.quoteAuthor);
 console.log(json.quoteText);
+$.ajaxSetup({ cache: false });
 });
 
 
