@@ -4,8 +4,10 @@ $(document).ready(function() {
 
 
     $.getJSON("https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en", function(json) {
-$("#message").html(json.quoteText + "<br> " + json.quoteAuthor);
-console.log(json.quoteText);
+$("#quote").html(json.quoteText + "<br> " + json.quoteAuthor);
+$("blockquote").css({"background-color": "#FFF", "border-left": "5px solid #CCC"});
+$("blockquote::before").css({"color": "#CCC"});
+
 $.ajaxSetup({ cache: false });
 });
 
@@ -13,27 +15,3 @@ $.ajaxSetup({ cache: false });
   });
 
 });
-/*
-$(document).ready(function() {
-
-function parseQuote(response)
-{
-document.getElementById("quote").innerHTML = response.quoteText;
-document.getElementById("author").innerHTML = response.quoteAuthor;
-}
-
-
-
-  $("#getQuote").on("click", function(){
-
-//http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=parseQuote&lang=en
-    $.getJSON("https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en", function(json) {
-$(".message").html(JSON.stringify(json));
-});
-
-
-  });
-
-});
-
-*/
