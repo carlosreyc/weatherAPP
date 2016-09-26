@@ -2,13 +2,14 @@
 
 body {
   font-family: 'Muli', 'monospace' ,sans-serif;
+  background: 	#29bdc1;
 
 }
 blockquote {
   background: #fff;
   border-left: 5px solid #fff;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+  /*margin: 1.5em 10px;
+  padding: 0.5em 10px;*/
 
 }
 
@@ -29,6 +30,26 @@ blockquote p {
 h1 {
   text-align: center;
 }
-#getQuote {
-  
+/*#rqmbutton {
+  position: absolute;
+  padding-top: 20px;
+  padding-left: 600px;
+}*/
+header {
+  padding-top: 250px;
+}
+#quotebox {
+  background: #fff;
+  height: 200px;
+  width: 700px;
+}
+
+#tweet-btn {
+  position: absolute;
+  padding: 10px;
+
+}
+
+#btn-right {
+  padding-left: 500px;
 }

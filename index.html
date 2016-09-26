@@ -19,16 +19,28 @@
     <header>
       <h1>Random Quote Machine</h1>
     </header>
-      <div class="container">
+      <div class="container" id="quotebox">
         <section id="quotes">
         <div id="message">
             <blockquote id="quote">
+            <footer id="author"></footer>
 
             <p></p>
+          </blockquote>
          </div>
         </section>
         <section id="rqmbutton">
-        <button class="btn-default btn center-block" id="getQuote">Make me feel better</button>
+          <div class="row">
+            <div class="col-md-6" id="btn-left">
+              <a href="#" class="btn btn-default" id="tweet-btn">Tweet</a>
+            </div>
+            <div class="col-md-6" id="btn-right">
+              <button class="btn-default btn " id="getQuote">Make me feel better</button>
+            </div>
+          </div>
+        <!-- <form action="#">
+          <button type="submit" class="btn-default btn">Tweet</button>
+        </form> -->
         </section>
     </div>
 
