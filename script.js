@@ -1,26 +1,29 @@
+
 $(document).ready(function() {
 
 function changeColor(){
-var bg = ["#00ffab","#eaff7b","#d84242","#913f92"];
+var bg = ["#00ffab","#eaff7b","#d84242","#913f92","#b09563","#6c01de"];
 var rand = bg[Math.floor(Math.random() * bg.length)];
-$("body").css('background', rand);
+$("body, #tweet-btn, #getQuote").css('background', rand);
 }
 
 $.getJSON("https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en", function(json) {
-  var quoteText = json.quoteText;
-  var quoteAuthor = json.quoteAuthor;
+
 $("#quote").html(json.quoteText + "<footer>" + json.quoteAuthor + "</footer>");
 
-$("#tweet-btn").attr("href", "https://twitter.com/intent/tweet?text=" +quoteText+ "Author:"+quoteAuthor);
-$.ajaxSetup({ cache: false });
+$("#tweet-btn").attr("href", "https://twitter.com/intent/tweet?text=" +json.quoteText+ "Author:"+json.quoteAuthor);
+  $.ajaxSetup({ cache: false });
 });
 
 
 $("#getQuote").on("click", function(){
+
 $.getJSON("https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en", function(json) {
   $("#quote").html(json.quoteText + "<footer>" + json.quoteAuthor + "</footer>");
-  $.ajaxSetup({ cache: false });
+
   changeColor();
+  $("#tweet-btn").attr("href", "https://twitter.com/intent/tweet?text=" +json.quoteText+ "Author:"+json.quoteAuthor);
+$.ajaxSetup({ cache: false });
 });
 
 

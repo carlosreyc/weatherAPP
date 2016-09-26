@@ -1,55 +1,65 @@
 @import 'https://fonts.googleapis.com/css?family=Muli';
-
 body {
-  font-family: 'Muli', 'monospace' ,sans-serif;
-  background: 	#29bdc1;
-
+    font-family: 'Muli', 'monospace', sans-serif;
+    background: #29bdc1;
 }
+
 blockquote {
-  background: #fff;
-  border-left: 5px solid #fff;
-  /*margin: 1.5em 10px;
+    background: #fff;
+    border-left: 5px solid #fff;
+    /*margin: 1.5em 10px;
   padding: 0.5em 10px;*/
-
 }
 
-blockquote p {
-  display: inline;
+footer {
+    text-align: right;
 }
 
-#container {
-  position: relative;
-
-}
 #message {
-  width: 640px;
-  height: auto;
-  margin: 0 auto;
-  position: relative;
+    width: 640px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
 }
+
 h1 {
-  text-align: center;
+    text-align: center;
 }
-/*#rqmbutton {
-  position: absolute;
-  padding-top: 20px;
-  padding-left: 600px;
-}*/
+
 header {
-  padding-top: 250px;
+    padding-top: 250px;
 }
+
 #quotebox {
-  background: #fff;
-  height: 200px;
-  width: 700px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #fff;
+    height: 200px;
+    width: 700px;
 }
+
+#buttons {
+  position: relative;
+  padding-left: 69%;
+  padding-top: 3%;
+}
+
+
+
 
 #tweet-btn {
-  position: absolute;
-  padding: 10px;
+    display: inline-block;
 
+    background: #29bdc1;
 }
 
-#btn-right {
-  padding-left: 500px;
+#getQuote {
+    display: inline-block;
+
+    background: #29bdc1;
+
 }
