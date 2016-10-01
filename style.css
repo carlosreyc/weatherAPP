@@ -1,4 +1,32 @@
+html,
+
 #data {
-  position: relative;
-  top: 0; right: 0; left: 0; bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5);;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    color: white;
+}
+.transform {
+  display: inline;
+  cursor: pointer;
+}
+
+div.temp {
+  display: inline;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  min-width: 100%;
+  min-height: 100%;
 }
